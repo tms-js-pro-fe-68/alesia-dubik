@@ -6,28 +6,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #317a2b;
+  background-color: #88f87e;
 }
 
-.white-circle {
-  background-color: #ffffff;
+.circle {
   width: 200px;
   height: 120px;
   border-radius: 100px;
   font-size: 30px;
-  color: #317a2b;
-  padding-top: 80px;
-  margin: 300px auto;
-  text-align: center;
-}
-
-.green-circle {
-  background-color: #145806;
-  width: 200px;
-  height: 120px;
-  border-radius: 100px;
-  font-size: 30px;
-  color: #317a2b;
+  color: #88f87e;
   padding-top: 80px;
   margin: 300px auto;
   text-align: center;

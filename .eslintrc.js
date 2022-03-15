@@ -21,5 +21,6 @@ module.exports = {
   rules: {
     'react/prop-types': 0,
     'react/react-in-jsx-scope': 0,
+    'jsx-a11y/click-events-have-key-events': 0,
   },
 };

@@ -1,9 +1,15 @@
-import React from "react"
-import changeColor from "./changeColor"
+import React, { useState } from "react"
+
 
 export default function App() {
+  const [color, setColor] = useState('blue');
+  
+  function changeColor() {
+    return setColor((prevColor) => (prevColor === 'blue' ? 'green' : 'blue'));
+  }
+
   return (
-    <div id="circle" className="green-circle" onClick={changeColor} role="button" tabIndex={0}>click on me</div>
+    <div className="circle" style={{background: color}} onClick={changeColor} role="button" tabIndex={0}>click on me</div>
   )
 }
 
