@@ -6,7 +6,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #88f87e;
+  background-color: #9a32f0;
 }
 
 .circle {
@@ -14,8 +14,30 @@ body {
   height: 120px;
   border-radius: 100px;
   font-size: 30px;
-  color: #88f87e;
+  color: #9a32f0;
   padding-top: 80px;
-  margin: 300px auto;
+  margin: 50px auto;
   text-align: center;
+}
+
+.music-group {
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  padding: 50px;
+  border: 3px solid #1e4905;
+  font-size: 18px;
+  text-align: center;
+}
+
+.group-name {
+  color: #1e4905;
+  font-weight: 700;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.group-style {
+  margin: 10px 0px;
 }
