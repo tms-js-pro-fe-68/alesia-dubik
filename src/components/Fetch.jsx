@@ -8,7 +8,7 @@ export default function Fetch(){
     
     useEffect(() => {
         setIsLoading(true)
-        fetch("http://www.boredapi.com/api/activity/")
+        fetch("https://www.boredapi.com/api/activity/")
         .then((response) => {
             if(response.status !== 200){
                 throw Error(response.statusText)
