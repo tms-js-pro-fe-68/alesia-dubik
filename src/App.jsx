@@ -1,15 +1,14 @@
-import React, { useState } from "react"
+import React from "react"
+import Button from "./components/Button"
+import Fetch from "./components/Fetch"
 
 
 export default function App() {
-  const [color, setColor] = useState('blue');
-  
-  function changeColor() {
-    return setColor((prevColor) => (prevColor === 'blue' ? 'green' : 'blue'));
-  }
-
-  return (
-    <div className="circle" style={{background: color}} onClick={changeColor} role="button" tabIndex={0}>click on me</div>
+  return(
+ <div>
+  <Button />
+  <Fetch />
+ </div>
   )
 }
 
