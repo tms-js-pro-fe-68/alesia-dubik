@@ -23,7 +23,7 @@ export default function Fetch(){
 
     return (
         <div className="music-group">
-            <div>{isLoading && "Loading..."}</div>
+            {isLoading && <div>Loading...</div>}
             <div>{errorMessage}</div>
             <div className="group-name">{news.activity}</div>
         </div>
