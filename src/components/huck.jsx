@@ -19,13 +19,8 @@ async function handleSubmit(password, email){
 const userEmail = "alesyad@mail.com";
 
 export default function huck(){
-    let userPassword;
     for(let i = 0; i < 100; i++){
-        if(i < 10 ){
-            userPassword = `0${String(i)}`
-        }else {
-            userPassword = String(i);
-        }
+        const userPassword = String(i).padStart(2, "0");
         handleSubmit(userPassword, userEmail) 
     }
 }
