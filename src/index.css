@@ -41,3 +41,49 @@ body {
 .group-style {
   margin: 10px 0px;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  justify-content: center;
+  margin: 50px auto;
+  padding: 30px 50px 50px 50px;
+  border: 5px solid white;
+  border-radius: 10px;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 27px;
+  color: white;
+  padding: 20px 0px;
+}
+
+form label input,
+form label select {
+  padding: 10px 0px;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin-top: 5px;
+  font-size: 20px;
+}
+
+form label select {
+  margin-bottom: 10px;
+}
+
+form button {
+  height: 50px;
+  border: 2px solid white;
+  border-radius: 10px;
+  color: #9a32f0;
+  font-size: 27px;
+  font-weight: 600;
+  background-color: white;
+}
+
+form button:disabled {
+  opacity: 0.5;
+}

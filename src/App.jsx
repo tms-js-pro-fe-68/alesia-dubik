@@ -1,13 +1,11 @@
 import React from "react"
-import Button from "./components/Button"
-import Fetch from "./components/Fetch"
+import Form from "./components/Form"
 
 
 export default function App() {
   return(
  <div>
-  <Button />
-  <Fetch />
+  <Form />
  </div>
   )
 }
