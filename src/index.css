@@ -20,19 +20,35 @@ body {
   text-align: center;
 }
 
-.music-group {
-  margin: 100px auto;
+.advice-container {
+  margin: 250px auto;
   display: flex;
   flex-direction: column;
   width: 500px;
+}
+
+.music-group {
   padding: 50px;
-  border: 3px solid #1e4905;
+  border: 5px solid white;
+  border-radius: 10px;
   font-size: 18px;
   text-align: center;
 }
 
+.advice-button {
+  margin-top: 20px;
+  border: 2px solid white;
+  background-color: white;
+  font-weight: 700;
+  color: #9a32f0;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 10px;
+}
+
 .group-name {
-  color: #1e4905;
+  color: white;
   font-weight: 700;
   font-size: 25px;
   margin-bottom: 20px;

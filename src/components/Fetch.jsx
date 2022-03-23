@@ -1,13 +1,11 @@
 import React, {useState, useEffect} from "react"
 
-
-export default function Fetch(){
-    const [isLoading, setIsLoading] = useState(true)
+function myHook(){
     const [news, setNews] = useState([])
     const [errorMessage, setErrorMessage] = useState("")
+    const [change, setChange] = useState(false)
     
     useEffect(() => {
-        setIsLoading(true)
         fetch("https://www.boredapi.com/api/activity/")
         .then((response) => {
             if(response.status !== 200){
@@ -18,14 +16,24 @@ export default function Fetch(){
             setNews(data)
         })
         .catch((error) => setErrorMessage(error.message))
-        .finally(() => setIsLoading(false));
-    }, []);
+        .finally(() => {
+        });
+    }, [change]);
+
+    return {errorMessage, setChange, change, news}
+}
+
+export default function Fetch(){
+
+    const {errorMessage, setChange, change, news} = myHook();
 
     return (
-        <div className="music-group">
-            {isLoading && <div>Loading...</div>}
-            <div>{errorMessage}</div>
-            <div className="group-name">{news.activity}</div>
+        <div className="advice-container">
+            <div className="music-group">
+                <div>{errorMessage}</div>
+                <div className="group-name">{news.activity}</div>
+            </div>
+            <div role="button" tabIndex={0} className="advice-button" onClick={() => change ? setChange(false) : setChange(true) }>another advice</div>
         </div>
     )
 }
