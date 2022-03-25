@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from "react"
 
 function myHook(https){
-    const [news, setNews] = useState([])
-    const [errorMessage, setErrorMessage] = useState("")
+    const [fetchData, setFetchData] = useState([])
+    const [error, setError] = useState("")
     const [change, setChange] = useState(false)
     const [loading, setLoading] = useState(false)
     
@@ -15,20 +15,20 @@ function myHook(https){
             }
             return response.json()})
         .then((data) => {
-            setNews(data)
+            setFetchData(data)
         })
-        .catch((error) => setErrorMessage(error.message))
+        .catch((errors) => setError(errors.message))
         .finally(() => {
             setLoading(false)
         });
     }, [change]);
 
-    return {errorMessage, setChange, change, news, loading}
+    return {fetchData, error, loading, setChange, change}
 }
 
 export default function Fetch(){
 
-    const {errorMessage, setChange, change, news, loading} = myHook("https://www.boredapi.com/api/activity/");
+    const {fetchData: news, error: errorMessage, loading, setChange, change} = myHook("https://www.boredapi.com/api/activity/");
 
     return (
         <div className="advice-container">
