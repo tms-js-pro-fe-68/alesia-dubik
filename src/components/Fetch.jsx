@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from "react"
 
-function myHook(){
+function myHook(https){
     const [news, setNews] = useState([])
     const [errorMessage, setErrorMessage] = useState("")
     const [change, setChange] = useState(false)
     
     useEffect(() => {
-        fetch("https://www.boredapi.com/api/activity/")
+        fetch(https)
         .then((response) => {
             if(response.status !== 200){
                 throw Error(response.statusText)
@@ -25,7 +25,7 @@ function myHook(){
 
 export default function Fetch(){
 
-    const {errorMessage, setChange, change, news} = myHook();
+    const {errorMessage, setChange, change, news} = myHook("https://www.boredapi.com/api/activity/");
 
     return (
         <div className="advice-container">
