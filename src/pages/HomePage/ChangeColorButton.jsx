@@ -1,5 +1,6 @@
+import React, {useState} from "react"
 import { Box, Typography } from "@mui/material";
-import {useState} from "react"
+
 
 export default function Button(){
   const [color, setColor] = useState('blue');
