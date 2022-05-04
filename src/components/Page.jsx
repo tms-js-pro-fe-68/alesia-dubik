@@ -13,7 +13,6 @@ export default function Page({ sx, ...otherProps }) {
 
   useEffect(() => {
     if (sessionStorage.token) {
-      // api.setup(sessionStorage.token)
       setIsInitialized(true)
     } else {
       navigateToLogin()

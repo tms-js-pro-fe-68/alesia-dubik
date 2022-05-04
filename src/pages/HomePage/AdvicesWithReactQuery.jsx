@@ -17,14 +17,6 @@ function myQueryHook(https, props){
     }
     );
 
-    // const { isLoading, error, data } = useQuery(['fetchData', props], async () => {
-    //     const res = await axios.get(https)
-    //     return res
-    // }, {
-    //     enabled: isInitialized,
-    // })
-
-    // return ({ isLoading, error, data })
 }
 
 export default function AdvicesWithReactQuery(){
