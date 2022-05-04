@@ -1,23 +1,11 @@
-import { Box, Button, Paper, TextField, Typography } from '@mui/material'
-import { Form, Formik, useFormik } from 'formik'
+import { Button, Paper, TextField, Typography } from '@mui/material'
+import { useFormik } from 'formik'
 import { useNavigate } from 'react-router-dom'
 import { object, string } from 'yup'
-import { styled, css } from '@mui/material/styles'
 
 import './LoginPage.css'
 import Page from '../../components/Page'
 
-const StyledDiv = styled(Paper)`
-  ${({ theme }) => css`
-    margin-top: ${theme.spacing(2)};
-    display: 'grid';
-    grid-template-columns: '1fr';
-    gap: 16px;
-    padding: 32px;
-    margin-top: 4px;
-    ${'' /* background: ${theme.palette.secondary.main}; */}
-  `}
-`
 
 export default function LoginPage() {
   const navigate = useNavigate()
@@ -38,12 +26,6 @@ export default function LoginPage() {
     )
 
     const data = await response.json()
-
-    // if (data.errors) {
-    //   const errorMessage = JSON.stringify(data.errors);
-    //   // setErrors([errorMessage]);
-    //   return;
-    // }
 
     sessionStorage.token = data.token
     sessionStorage.email = data.email
